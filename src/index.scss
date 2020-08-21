@@ -1,0 +1,177 @@
+/* Variables */
+$font: 'Roboto', sans-serif; /* Primary font */
+$white: #fdfdfd; /* White */
+$black: #111; /* black BG */
+$dark: #22384A; /* Dark on white */
+$red: #FF6161; /* Tagline color */
+$grey: #878787; /* Grey font */
+$soundcloud: #ff8800; /* soundcloud */
+$spotify: #1DB954; /* spotify */
+$highlight: #3AC7D2; /* highlight */
+$facebook: #3C5A99; /* facebook */
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px !important; /* Overwriting css clear - need better fix */
+  background-color: $white;
+}
+html, #root {
+  margin: 0;
+  font-family: $font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%; /* 100% viewheight as a minimum */
+  width: 100%;
+}
+
+body {
+  max-width: 40rem;
+  margin: auto;
+}
+#footer-always-bottom {
+  height: 100%; /* 100% viewheight as a minimum */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#contentwrap {
+  padding: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;  
+  margin: auto;
+}
+
+.remove-decoration {
+  text-decoration: none;
+}
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; /* Prevents browsers from letting this item shrink to smaller than contents default minimum size */
+  background-color: $black;
+}
+
+
+/* Fonts */
+h1 {
+  font-family: $font;
+  font-size: 3.6rem;
+  font-weight: 800;
+  letter-spacing: .2rem;
+  margin: 16px 0 16px 0;
+}
+h2 {
+  font-family: $font;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin: 8px 0 8px 0;
+}
+h3 {
+  font-family: $font;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 4px 0 4px 0;
+}
+
+hr {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  width: 100%;
+}
+
+a {
+  color: $black;
+}
+a:visited {
+  color: $black;
+}
+a:hover, a:active, a:focus {
+  color: $black;
+}
+
+.app {
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-pic {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: 2px solid $black;
+  }
+  .profile-pic::before{
+    box-sizing: border-box;
+  }
+  .profile-pic::after{
+    box-sizing: border-box;
+  }
+  .list {
+    padding: 0;
+    list-style: none;
+    margin: 0 0 2.5rem;
+    li {
+      margin: .25rem 0 0;
+    }
+  }
+}
+
+/* Footer */
+.footer {
+  flex-shrink: 0; /* Prevents browsers from letting this item shrink to smaller than contents default minimum size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .socials {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 0 0 .5rem;
+    padding: 0;
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+    li {
+      margin: 0 4px 0 4px;
+    }
+  }
+  span {
+    margin-top: 15px;
+    font-family: $font;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: $black;
+  }
+}
+/* Header */
+.header {
+  flex-shrink: 0; /* Prevents browsers from letting this item shrink to smaller than contents default minimum size */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 0;
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    a {
+      padding-right: 10px;
+      text-decoration: none;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+
